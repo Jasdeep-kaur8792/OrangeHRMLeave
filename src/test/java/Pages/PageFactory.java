@@ -5,6 +5,7 @@ public class PageFactory {
     WebDriver driver;
     private LogInPage logInPage;
     private AdminPage adminPageDetail;
+    private LeaveModule leaveModuleClick;
     public PageFactory(WebDriver driver){
         this.driver = driver;
     }
@@ -24,5 +25,13 @@ public class PageFactory {
             adminPageDetail = new AdminPage(driver);
         }
         return adminPageDetail;
+    }
+    public LeaveModule getLeavePage()
+
+    {
+        if (leaveModuleClick == null) {
+            leaveModuleClick= new LeaveModule(driver);
+        }
+        return leaveModuleClick;
     }
 }

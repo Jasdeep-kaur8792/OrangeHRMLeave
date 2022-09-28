@@ -1,14 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="30.245">
-    <testcase classname="Checking Login Functionality of the Application" name="Checking Login Functionality with Valid Username also" time="18.841">
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="31.759">
+    <testcase classname="Checking Login Functionality of the Application" name="Checking Login Functionality with Valid Username also" time="15.867">
         <system-out><![CDATA[Given User is on Login Page.................................................passed
 When user Enter the Username in "Admin" and enter the password "admin123"...passed
 Then should click on Login button...........................................passed
 ]]></system-out>
     </testcase>
-    <testcase classname="Checking Login Functionality of the Application" name="Checking Admin Page Functionality" time="10.995">
-        <system-out><![CDATA[Given User click on Admin Page..............................................passed
-Then Then click om Add And Fill user details................................passed
-]]></system-out>
+    <testcase classname="Checking Login Functionality of the Application" name="Checking Admin Page Functionality" time="15.5">
+        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),'Admin')]&quot;}&#10;  (Session info: chrome=105.0.5195.127)&#10;For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element&#10;Build info: version: '4.1.0', revision: '87802e897b'&#10;System info: host: 'JASDEEPPC', ip: '10.20.1.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Command: [8697ddb2d40781fcb3f5ee84d8034bad, findElement {using=xpath, value=//*[contains(text(),'Admin')]}]&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\JASDEE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64662}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64662/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 8697ddb2d40781fcb3f5ee84d8034bad" type="org.openqa.selenium.NoSuchElementException"><![CDATA[Given User click on Admin Page..............................................passed
+Then Then click om Add And Fill user details................................failed
+
+StackTrace:
+org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Admin')]"}
+  (Session info: chrome=105.0.5195.127)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.0', revision: '87802e897b'
+System info: host: 'JASDEEPPC', ip: '10.20.1.54', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [8697ddb2d40781fcb3f5ee84d8034bad, findElement {using=xpath, value=//*[contains(text(),'Admin')]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 105.0.5195.127, chrome: {chromedriverVersion: 105.0.5195.52 (412c95e51883..., userDataDir: C:\Users\JASDEE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64662}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:64662/devtoo..., se:cdpVersion: 105.0.5195.127, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8697ddb2d40781fcb3f5ee84d8034bad
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:139)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:559)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:383)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:375)
+	at Pages.AdminPage.select(AdminPage.java:66)
+	at StepDefinition.StepDefinition1.user_click_on_Add_Button_fill_user_details(StepDefinition1.java:37)
+	at ✽.Then click om Add And Fill user details(file:///B:/Java_Programs/orangeHRM/src/test/java/FeatureFile/Login.feature:12)
+]]></failure>
     </testcase>
 </testsuite>
